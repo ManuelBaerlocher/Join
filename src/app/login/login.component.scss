@@ -1,0 +1,92 @@
+.loginComponent {
+    height: 100vh;
+    width: 100%;
+    background: #f6f7f8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+
+    img {
+        height: 122px;
+        width: 100px;
+        padding-top: 80px;
+        padding-left: 77px;
+    }
+
+    .rightHeader {
+        display: flex;
+        align-items: center;
+        padding-top: 67px;
+        padding-right: 114px;
+        font-family: "inter", sans-serif;
+
+        p {
+            font-size: 21px;
+            font-weight: 400;
+        }
+
+        button {
+            background: #2a3647;
+            border-radius: 8px;
+            width: 91px;
+            height: 51px;
+            margin-left: 35px;
+            color: white;
+            font-family: "inter", sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+        }
+    }
+}
+
+.loginSection {
+    background-color: #ffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+        font-family: "inter", sans-serif;
+        font-size: 61px;
+        font-weight: 700;
+        margin-bottom: 0;
+    }
+
+    .blueLine {
+        border: 3px solid #29abe2;
+        width: 150px;
+        margin-top: 24px;
+        margin-bottom: 35px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .inputField {
+        width: 422px;
+        height: 51px;
+        border: 1px solid #d1d1d1;
+        border-radius: 10px;
+        padding: 13px 21px;
+        font-family: "inter", sans-serif;
+        font-size: 21px;
+        font-weight: 400;
+        
+        
+    }
+}
