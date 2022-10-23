@@ -21,32 +21,10 @@ header {
         padding-top: 80px;
         padding-left: 77px;
     }
-    .rightHeader {
-        display: flex;
-        align-items: center;
-        padding-top: 67px;
-        padding-right: 114px;
-        font-family: "inter", sans-serif;
-        p {
-            font-size: 21px;
-            font-weight: 400;
-        }
-        button {
-            background: #2a3647;
-            border: none;
-            border-radius: 8px;
-            width: 91px;
-            height: 51px;
-            margin-left: 35px;
-            color: white;
-            font-family: "inter", sans-serif;
-            font-size: 16px;
-            font-weight: 700;
-        }
-    }
 }
 
 .loginSection {
+    position: relative;
     background-color: #ffff;
     display: flex;
     flex-direction: column;
@@ -54,10 +32,17 @@ header {
     justify-content: center;
     box-shadow: 0px 0px 14px 3px rgba(0, 0, 0, 0.04);
     border-radius: 30px;
+    img {
+        position: absolute;
+        height: 24px;
+        top: 42px;
+        left: 37px;
+    }
     h1 {
         font-family: "inter", sans-serif;
         font-size: 61px;
         font-weight: 700;
+        margin-top: 35px;
         margin-bottom: 0;
     }
     .blueLine {
@@ -101,6 +86,10 @@ header {
         background-repeat: no-repeat;
         margin-left: 115px;
         margin-right: 115px;
+    }
+    .inputName {
+        background-image: url("../../assets/img/name.png");
+        margin-bottom: 49px;
     }
     .inputMail {
         background-image: url("../../assets/img/mail.png");
@@ -146,17 +135,7 @@ header {
             font-weight: 700;
             color: #ffff;
             background-color: #2a3647;
-            padding: 13px 42px 13px 42px;
-        }
-        .guestButton {
-            background-color: transparent;
-            border: 1px solid #2a3647;
-            margin-left: 35px;
-            font-family: "inter", sans-serif;
-            font-size: 21px;
-            font-weight: 700;
-            color: #2a3647;
-            padding: 13px 16px 13px 16px;
+            padding: 13px 33px 13px 33px;
         }
     }
 }
