@@ -37,6 +37,7 @@ header {
         height: 24px;
         top: 42px;
         left: 37px;
+        cursor: pointer;
     }
     h1 {
         font-family: "inter", sans-serif;
@@ -124,9 +125,13 @@ header {
     .buttons {
         margin-bottom: 35px;
         button {
+            cursor: pointer;
             margin-bottom: 0;
             height: 51px;
             border-radius: 8px;
+            &:hover {
+                background: #29ABE2;
+            }
         }
         .loginButton {
             border: none;

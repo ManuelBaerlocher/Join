@@ -15,12 +15,6 @@ header {
     right: 0;
     display: flex;
     justify-content: space-between;
-    img {
-        height: 122px;
-        width: 100px;
-        padding-top: 80px;
-        padding-left: 77px;
-    }
     .rightHeader {
         display: flex;
         align-items: center;
@@ -42,7 +36,63 @@ header {
             font-family: "inter", sans-serif;
             font-size: 16px;
             font-weight: 700;
+            cursor: pointer;
+            &:hover {
+                background: #29ABE2;
+            }
         }
+    }
+}
+
+.logo {
+    position: fixed;
+    height: 122px;
+    width: 100px;
+    top: 80px;
+    left: 77px;
+    animation: startAnimationImg 1s ease-in;
+}
+
+.startAnimaton {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background-color: #f6f7f8;
+    animation: startAnimation 1s ease-in;
+    z-index: -1;
+}
+
+@keyframes startAnimation {
+    0% {
+        opacity: 1;
+        z-index: 998;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes startAnimationImg {
+    0% {
+        height: 334px;
+        width: 274px;
+        top: calc(50vh - 167px);
+        left: calc(50% - 137px);
+        z-index: 999;
+    }
+    60% {
+        height: 334px;
+        width: 274px;
+        top: calc(50vh - 167px);
+        left: calc(50% - 137px);
+        z-index: 999;
+    }
+    100% {
+        height: 122px;
+        width: 100px;
+        top: 80px;
+        left: 77px;
+        z-index: 999;
     }
 }
 
@@ -147,6 +197,10 @@ header {
             color: #ffff;
             background-color: #2a3647;
             padding: 13px 42px 13px 42px;
+            cursor: pointer;
+            &:hover {
+                background: #29ABE2;
+            }
         }
         .guestButton {
             background-color: transparent;
@@ -157,6 +211,11 @@ header {
             font-weight: 700;
             color: #2a3647;
             padding: 13px 16px 13px 16px;
+            cursor: pointer;
+            &:hover {
+                color: #29ABE2;
+                border: 1px solid #29ABE2;
+            }
         }
     }
 }
