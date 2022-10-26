@@ -9,6 +9,8 @@ import { SummaryComponent } from './summary/summary.component';
 import { BoardComponent } from './board/board.component';
 import { AddTaskComponent } from './add-task/add-task.component';
 import { ContactsComponent } from './contacts/contacts.component';
+import { HeaderComponent } from './header/header.component';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { ContactsComponent } from './contacts/contacts.component';
     SummaryComponent,
     BoardComponent,
     AddTaskComponent,
-    ContactsComponent
+    ContactsComponent,
+    HeaderComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,

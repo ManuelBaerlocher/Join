@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: 'board', component: BoardComponent },
   { path: 'addtask', component: AddTaskComponent },
   { path: 'contacts', component: ContactsComponent },
-  { path: '', component: LoginComponent}
+  { path: '', component: LoginComponent, outlet: 'login'}
 
 ];
 

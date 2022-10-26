@@ -1,33 +1,10 @@
+<!-- <router-outlet name="login"></router-outlet> -->
+
 <div class="mainContainer">
-    <header>
-        <span>Kanban Project Management Tool</span>
-        <div class="headerRight">
-            <img src="../assets/img/question.png">
-            <img class="user" src="../assets/img/user.png">
-        </div>
-    </header>
-    <div class="menu">
-        <img class="logo" src="../assets/img/logowhite.png">
+    <app-header></app-header>
+    <app-menu></app-menu>
 
-        <ul class="links">
-            <li routerLinkActive="select" [routerLink]="['summary']"><img src="../assets/img/summary.png">Summary</li>
-            <li [routerLink]="['board']" routerLinkActive="select"><img src="../assets/img/board.png">Board</li>
-            <li routerLinkActive="select" [routerLink]="['addtask']"><img src="../assets/img/addTask.png">Add Task</li>
-            <li routerLinkActive="select" [routerLink]="['contacts']"><img src="../assets/img/contacts.png">Contacts</li>
-        </ul>
 
-        <ul class="legalNotice">
-            <li [routerLink]="['imprint']"><img src="../assets/img/legalNotice.png">Imprint</li>
-            <li [routerLink]="['dataprotection']"><img src="../assets/img/legalNotice.png">Data-Protection</li>
-        </ul>
-    </div>
-    <div>
-        <span>Kanban Project Management Tool</span>
-        <div>
-            <img>
-            <img>
-        </div>
-    </div>
 
     <div class="component">
         <router-outlet></router-outlet>
