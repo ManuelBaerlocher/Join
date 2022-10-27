@@ -1,0 +1,55 @@
+.mainContainer {
+    margin: 82px 128px 0 123px;
+    font-family: "inter", sans-serif;
+}
+
+h1 {
+    margin: 0;
+    font-size: 61px;
+    font-weight: 700;
+}
+
+h2 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 27px;
+}
+
+.headSection {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 48px;
+    img {
+        cursor: pointer;
+    }
+}
+
+.secondSection {
+    margin-bottom: 35px;
+    h2 {
+        margin-bottom: 10px;
+    }
+    span {
+        margin-top: 10px;
+        font-weight: 400;
+        font-size: 16px;
+        text-align: justify;
+    }
+}
+
+.lastSection {
+    display: flex;
+    flex-direction: column;
+    .title {
+        margin-bottom: 35px;
+    }
+    div {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 10px;
+    }
+    .number {
+        margin-right: 35px;
+    }
+}

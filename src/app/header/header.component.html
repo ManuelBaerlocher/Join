@@ -1,7 +1,9 @@
 <header>
     <span>Kanban Project Management Tool</span>
     <div class="headerRight">
-        <img src="../assets/img/question.png">
+        <img [routerLink]="['help']" src="../assets/img/question.png">
         <img class="user" src="../assets/img/user.png">
     </div>
+    <!-- <button [routerLink]="[{ outlets: { primary: '../loginSide', aux: '/loginSide' }}]">Log out</button> -->
+    <button *ngIf="false">Log out</button>
 </header>

@@ -11,6 +11,7 @@ import { AddTaskComponent } from './add-task/add-task.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { HeaderComponent } from './header/header.component';
 import { MenuComponent } from './menu/menu.component';
+import { HelpSideComponent } from './help-side/help-side.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { MenuComponent } from './menu/menu.component';
     AddTaskComponent,
     ContactsComponent,
     HeaderComponent,
-    MenuComponent
+    MenuComponent,
+    HelpSideComponent
   ],
   imports: [
     BrowserModule,
