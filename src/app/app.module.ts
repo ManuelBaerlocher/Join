@@ -12,6 +12,7 @@ import { ContactsComponent } from './contacts/contacts.component';
 import { HeaderComponent } from './header/header.component';
 import { MenuComponent } from './menu/menu.component';
 import { HelpSideComponent } from './help-side/help-side.component';
+import { LegalnoticeComponent } from './legalnotice/legalnotice.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { HelpSideComponent } from './help-side/help-side.component';
     ContactsComponent,
     HeaderComponent,
     MenuComponent,
-    HelpSideComponent
+    HelpSideComponent,
+    LegalnoticeComponent
   ],
   imports: [
     BrowserModule,

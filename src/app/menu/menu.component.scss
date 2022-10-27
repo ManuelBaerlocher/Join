@@ -51,6 +51,10 @@
         color: #cdcdcd;
         top: 290px;
         padding: 0;
+        margin-bottom: 126px;
+        .select {
+            background: #091931;
+        }
         li {
             height: 46px;
             padding: 8px 40px 8px 40px;
@@ -64,6 +68,7 @@
             img {
                 margin-right: 18px;
             }
+            cursor: pointer;
         }
     }
 }

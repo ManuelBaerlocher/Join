@@ -1,1 +1,69 @@
-<p>add-task works!</p>
+<div class="mainContainer">
+    <div>
+        <h1>
+            Add Task
+        </h1>
+    </div>
+    <div class="mainSection">
+        <div class="leftSection">
+            <label>
+                Title
+            </label>
+            <input type="text" placeholder="Enter a title">
+            <label>
+                Description
+            </label>
+            <textarea placeholder="Enter a Description"></textarea>
+            <label>
+                Category
+            </label>
+            <select>
+                <option>Select Task category</option>
+                <option>New category<div>Hallo Welt</div></option>
+                <option>Sales</option>
+                <option>Backoffice</option>
+            </select>
+            <label>
+                Assigned to
+            </label>
+            <select>
+                <option>Select contacts to assign</option>
+                <option>You</option>
+                <option>Maximilian Vogel</option>
+                <option>Invite new contact</option>
+            </select>
+        </div>
+        <img src="../../assets/img/greyLineAddTask.png">
+        <div class="rightSection">
+            <label>
+                Due date
+            </label>
+            <input type="date">
+            <label>
+                Prio
+            </label>
+            <div class="prio">
+                <button>Urgent <img src="../../assets/img/urgent.png"></button>
+                <button>Medium <img src="../../assets/img/medium.png"></button>
+                <button>Low <img src="../../assets/img/low.png"></button>
+            </div>
+            <div class="subTasks">
+                <label>
+                Subtasks
+                </label>
+                <button>
+                    <span>Add new subtask</span>
+                    <img src="../../assets/img/addSubTask.png">
+                </button>
+                <div class="checkBoxSubTask">
+                    <input type="checkbox">
+                    <label>Subtask 1</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="buttons">
+        <button class="firstButton">Clear <img src="../../assets/img/clear.png"></button>
+        <button class="secondButton">Create Task <img src="../../assets/img/createTask.png"></button>
+    </div>
+</div>

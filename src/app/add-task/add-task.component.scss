@@ -1,0 +1,170 @@
+.mainContainer {
+    margin: 82px 123px 74px 123px;
+    font-family: "inter", sans-serif;
+}
+
+button {
+    padding: 0;
+    background: #ffffff;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+    border: none;
+}
+
+h1 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 61px;
+    margin-bottom: 41px;
+}
+
+label {
+    font-weight: 400;
+    font-size: 21px;
+    margin-bottom: 8px;
+}
+
+.mainSection {
+    display: flex;
+}
+
+.leftSection {
+    display: flex;
+    flex-direction: column;
+    width: 422px;
+    margin-right: 58px;
+    input,
+    textarea,
+    select {
+        background: #ffffff;
+        border: 1px solid #d1d1d1;
+        border-radius: 10px;
+        padding: 13px 21px;
+        font-weight: 400;
+        font-size: 21px;
+        margin-bottom: 34px;
+    }
+    textarea {
+        height: 119px;
+    }
+}
+
+.rightSection {
+    display: flex;
+    flex-direction: column;
+    width: 422px;
+    margin-left: 58px;
+    input {
+        background: #ffffff;
+        border: 1px solid #d1d1d1;
+        border-radius: 10px;
+        padding: 13px 21px;
+        font-weight: 400;
+        font-size: 21px;
+        margin-bottom: 34px;
+    }
+    .prio {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 38px;
+        label {
+            margin-bottom: 8px;
+        }
+        button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 18px 10px;
+            width: 136px;
+            height: 51px;
+            background: #ffffff;
+            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            font-weight: 400;
+            font-size: 21px;
+            img {
+                margin-left: 10px;
+            }
+        }
+    }
+    .subTasks {
+        display: flex;
+        flex-direction: column;
+        button {
+            height: 51px;
+            background: #ffffff;
+            border: 1px solid #d1d1d1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 21px;
+            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            font-weight: 400;
+            font-size: 21px;
+            color: #d1d1d1;
+            margin-bottom: 8px;
+        }
+        .checkBoxSubTask {
+            height: 16px;
+            input {
+                margin-right: 20px;
+                background: #ffffff;
+                border: 1px solid #d1d1d1;
+                border-radius: 0;
+                padding: 0;
+                font-weight: 400;
+                font-size: 0;
+                margin-bottom: 0;
+                margin-top: 0;
+                height: 16px;
+                width: 16px;
+            }
+            label {
+                font-weight: 400;
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    button {
+        height: 61px;
+        border-radius: 10px;
+        padding: 18px 10px;
+        font-weight: 700;
+        font-size: 21px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    .firstButton {
+        border: 1px solid #2a3647;
+        border-radius: 10px;
+        margin-right: 25px;
+        color: #2a3647;
+        width: 136px;
+        img {
+            margin-left: 14px;
+        }
+        &:hover {
+            color: #29abe2;
+            border: 2px solid #29ABE2;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        }
+    }
+    .secondButton {
+        background: #2a3647;
+        color: white;
+        width: 177px;
+        img {
+            margin-left: 14px;
+        }
+        &:hover {
+            background: #29ABE2;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        }
+    }
+}
