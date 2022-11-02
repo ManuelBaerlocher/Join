@@ -13,6 +13,11 @@ import { HeaderComponent } from './header/header.component';
 import { MenuComponent } from './menu/menu.component';
 import { HelpSideComponent } from './help-side/help-side.component';
 import { LegalnoticeComponent } from './legalnotice/legalnotice.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+//Angular Material 
+import {MatIconModule} from '@angular/material/icon';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatListModule} from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -30,7 +35,12 @@ import { LegalnoticeComponent } from './legalnotice/legalnotice.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    //Angular Material
+    MatIconModule,
+    MatDividerModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

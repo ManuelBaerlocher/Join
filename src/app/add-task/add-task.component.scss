@@ -131,22 +131,25 @@ label {
 .buttons {
     display: flex;
     justify-content: flex-end;
+    
     button {
+        display: flex;
+        align-items: center;
         height: 61px;
         border-radius: 10px;
-        padding: 18px 10px;
         font-weight: 700;
         font-size: 21px;
         border-radius: 10px;
         cursor: pointer;
     }
     .firstButton {
+        padding: 18px 10px 18px 24px;
         border: 1px solid #2a3647;
         border-radius: 10px;
         margin-right: 25px;
         color: #2a3647;
         width: 136px;
-        img {
+        mat-icon {
             margin-left: 14px;
         }
         &:hover {
@@ -156,11 +159,12 @@ label {
         }
     }
     .secondButton {
+        padding: 18px 10px;
         background: #2a3647;
         color: white;
         width: 177px;
-        img {
-            margin-left: 14px;
+        mat-icon {
+            margin-left: 10px;
         }
         &:hover {
             background: #29ABE2;
