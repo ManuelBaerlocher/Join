@@ -1,3 +1,129 @@
+.mainContainer {
+    font-family: "inter", sans-serif;
+    display: flex;
+}
+
+.contactList {
+    background-color: white;
+    height: calc(100vh - 89px);
+    width: 453px;
+    box-shadow: 4px 0px 6px rgba(0, 0, 0, 0.08);
+    h3 {
+        margin: 10px 0 24px 85px;
+        font-size: 21px;
+    }
+}
+
 .mat-list-icon {
     color: rgba(0, 0, 0, 0.54);
-  }
+}
+
+.divider {
+    width: 323px;
+    display: flex;
+    justify-content: center;
+    margin-left: 65px;
+    color: #d1d1d1;
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    margin: 10px 0 10px 48px;
+    width: 357px;
+    height: 79px;
+}
+
+.selectContact {
+    background: #2a3647;
+    border-radius: 10px;
+    color: white;
+}
+
+.contactIcon {
+    background-color: orange;
+    width: 42px;
+    height: 42px;
+    border-radius: 100%;
+    border: 1px solid #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: white;
+    margin-right: 42px;
+    margin-left: 25px;
+}
+
+.contactName {
+    font-size: 21px;
+    padding-bottom: 5px;
+}
+
+.contactMail {
+    font-size: 16px;
+    color: #007cee;
+}
+
+.rightContainer {
+    margin-left: 58px;
+    margin-top: 82px;
+}
+
+.firstSection {
+    display: flex;
+    align-items: center;
+    h1 {
+        font-size: 61px;
+        font-weight: 700;
+    }
+    img {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    span {
+        font-weight: 400;
+        font-size: 27px;
+        color: #2a3647;
+    }
+}
+
+.contactTitle {
+    display: flex;
+    margin-top: 82px;
+    .contactIconRight {
+        background-color: orange;
+        width: 120px;
+        height: 120px;
+        border-radius: 100%;
+        border: 3px solid #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 47px;
+        color: white;
+        margin-right: 42px;
+        margin-left: 25px;
+    }
+    h2 {
+        margin: 0;
+        font-weight: 500;
+        font-size: 47px;
+        margin-bottom: 13px;
+    }
+    .rightContactTitle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center
+    }
+    .addTask {
+        color: #29ABE2;
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        height: 24px;
+        span {
+            margin-left: 13px;
+        }
+    }
+}
