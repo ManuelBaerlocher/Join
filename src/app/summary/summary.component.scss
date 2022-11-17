@@ -1,6 +1,6 @@
 .mainContainer {
     margin: 82px 0 153px 123px;
-    font-family: "inter", sans-serif;
+    font-family: "inter", sans-serif!important;
 }
 
 button {
@@ -15,6 +15,12 @@ h1,
 h2,
 h3 {
     margin: 0;
+    font-family: "inter", sans-serif!important;
+    line-height: 120%;
+}
+
+.mat-typography h2 {
+    font-family: "inter", sans-serif!important;
 }
 
 .firstSection {
