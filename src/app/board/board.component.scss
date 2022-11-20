@@ -1,3 +1,33 @@
+.mainContainer {
+    font-family: "inter", sans-serif;
+    position: absolute;
+    left: 232px;
+    right: 0;
+    top: 89px;
+    bottom: 0;
+}
+
+
+
+.headContainer {
+    display: flex;
+    justify-content: space-between;
+
+
+    h1{
+        font-weight: 700;
+        font-size: 61px;
+        margin: 0;
+    }
+
+    .headRightSide{
+        display: flex;
+
+    }
+
+
+}
+
 .searchInput {
     display: flex;
     align-items: center;
@@ -6,7 +36,7 @@
     border-radius: 8px;
     width: 251px;
     height: 51px;
-    background: #FFFFFF;
+    background: #ffffff;
     input {
         border: none;
         border-right: 1px solid rgba(0, 0, 0, 0.2);
