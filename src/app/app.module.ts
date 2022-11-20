@@ -16,9 +16,7 @@ import { LegalnoticeComponent } from './legalnotice/legalnotice.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //Angular Material 
 import {MatIconModule} from '@angular/material/icon';
-import {MatDividerModule} from '@angular/material/divider';
-import {MatListModule} from '@angular/material/list';
-import {DragDropModule} from '@angular/cdk/drag-drop';
+// import {DragDropModule} from '@angular/cdk/drag-drop';
 
 @NgModule({
   declarations: [
@@ -40,9 +38,9 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
     BrowserAnimationsModule,
     //Angular Material
     MatIconModule,
-    MatDividerModule,
-    MatListModule,
-    DragDropModule
+
+
+    // DragDropModule
   ],
   providers: [],
   bootstrap: [AppComponent]
