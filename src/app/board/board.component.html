@@ -1,7 +1,7 @@
-<div>
-    <div>
+<div class="mainContainer">
+    <div class="title">
         <h1>Board</h1>
-        <div>
+        <div class="titleRightSection">
             <div class="searchInput">
                 <input placeholder="Find Task">
                 <img src="../../assets/img/search.png">
@@ -10,20 +10,31 @@
         </div>
     </div>
     <div>
-        <!-- <div class="example-container">
-            <h2>To do</h2>
-
-            <div cdkDropList #todoList="cdkDropList" [cdkDropListData]="todo" [cdkDropListConnectedTo]="[doneList]" class="example-list" (cdkDropListDropped)="drop($event)">
-                <div class="example-box" *ngFor="let item of todo" cdkDrag>{{item}}</div>
+        <div>
+            <div>
+                <h2>To do</h2>
+                <button>+</button>
+            </div>
+            <div>
+                <div>
+                    <div>TAG</div>
+                    <div>
+                        <h3>Website redesign</h3>
+                        <span>Modifz the contents of the main website...</span>
+                    </div>
+                    <div>
+                        <div>Statusbar</div>
+                        <span>1/2 Done</span>
+                    </div>
+                    <div>
+                        <div>
+                            <div class="contactIcon">MB</div>
+                        </div>
+                        <img src="../../assets/img/low.png">
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="example-container">
-            <h2>Done</h2>
-
-            <div cdkDropList #doneList="cdkDropList" [cdkDropListData]="done" [cdkDropListConnectedTo]="[todoList]" class="example-list" (cdkDropListDropped)="drop($event)">
-                <div class="example-box" *ngFor="let item of done" cdkDrag>{{item}}</div>
-            </div>
-        </div> -->
     </div>
 </div>
