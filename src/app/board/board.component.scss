@@ -4,6 +4,8 @@
     flex-direction: column;
     margin-left: 70px;
     box-sizing: border-box;
+    margin-right: 65px;
+    margin-top: 93px;
 }
 
 h1 {
@@ -30,17 +32,24 @@ h1 {
             width: 137px;
             height: 51px;
             border-radius: 10px;
-            font-weight: 700;
-            font-size: 21px;
-            border-radius: 10px;
+            margin-left: 35px;
             cursor: pointer;
             padding: 18px 10px;
             background: #2a3647;
             color: white;
             border: 1px solid #2a3647;
+            span {
+                width: 92px;
+                height: 25px;
+                font-family: "inter", sans-serif !important;
+                font-weight: 700;
+                font-size: 21px;
+                line-height: 120%;
+                white-space: nowrap
+            }
             img {
-                margin-left: 10px;
-                height: 30px;
+                padding-left: 10px;
+                height: 15px;
             }
             &:hover {
                 background: #29abe2;
@@ -59,12 +68,20 @@ h1 {
         height: 51px;
         background: #ffffff;
         input {
+            margin-left: 21px;
             border: none;
             border-right: 1px solid rgba(0, 0, 0, 0.2);
             height: 20px;
+            font-weight: 400;
+            font-size: 16px;
+            width: 181px;
+            &:focus {
+                outline: none;
+            }
         }
         img {
-            margin-right: 24px;
+            margin-right: 11px;
+            margin-left: 15px;
         }
     }
     .contactIcon {
@@ -79,4 +96,8 @@ h1 {
         font-size: 12px;
         color: white;
     }
+}
+
+.secondContainer {
+    margin-top: 112px;
 }
