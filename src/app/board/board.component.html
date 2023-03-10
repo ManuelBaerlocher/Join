@@ -9,21 +9,184 @@
             <button>Add Task</button>
         </div>
     </div>
-    <div>
-        <!-- <div class="example-container">
-            <h2>To do</h2>
+    <div class="secondContainer">
+        <div class="firstSectionBoard">
+            <div class="secondTitle">
+                <h2>To do</h2>
+                <button class="testButton"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 1.5V16.5"  stroke-width="2" stroke-linecap="round"/>
+                    <path d="M16.5 9.14148L1.5 9.14148"  stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </div>
+            <div *ngFor="let todo of todos">
+                <div *ngIf="this.todo.category == 'toDo'" class="taskContainer" draggable="true">
+                    <div class="tagContainer">{{this.todo.tag}}</div>
+                    <div class="textTask">
+                        <h3>{{this.todo.title}}</h3>
+                        <span>{{this.todo.text}}.</span>
+                    </div>
+                    <div *ngIf="this.todo.stateNow > 0" class="statusContainer">
+                        <div class="progressBar">
+                            <div class="progressStateNow" style="width: calc(100%/{{this.todo.stateTotal}}*{{this.todo.stateNow}});"></div>
+                        </div>
+                        <span>{{this.todo.stateNow}}/{{this.todo.stateTotal}} Done</span>
+                    </div>
+                    <div class="contactSection">
+                        <div class="contacts">
+                            <div *ngFor="let contactName of this.todo.contacts.names;  index as i">
+                                <div *ngIf="this.todo.contacts.names.length <= 3 " class="contactIcon" style="background-color: {{this.todo.contacts.colors[i]}};"> {{contactName}}</div>
+                                <div *ngIf="i < 2 && this.todo.contacts.names.length > 3" class="contactIcon" style="background-color: {{this.todo.contacts.colors[i]}};">{{contactName}}</div>
+                            </div>
+                            <div *ngIf="this.todo.contacts.names.length >= 4" class="moreContactsIcon">+{{this.todo.contacts.names.length-2}}</div>
+                        </div>
 
-            <div cdkDropList #todoList="cdkDropList" [cdkDropListData]="todo" [cdkDropListConnectedTo]="[doneList]" class="example-list" (cdkDropListDropped)="drop($event)">
-                <div class="example-box" *ngFor="let item of todo" cdkDrag>{{item}}</div>
+                        <img src=" ../../assets/img/{{this.todo.priority}}.png ">
+                    </div>
+                </div>
+                <div class="marginContainer"></div>
             </div>
         </div>
-
-        <div class="example-container">
-            <h2>Done</h2>
-
-            <div cdkDropList #doneList="cdkDropList" [cdkDropListData]="done" [cdkDropListConnectedTo]="[todoList]" class="example-list" (cdkDropListDropped)="drop($event)">
-                <div class="example-box" *ngFor="let item of done" cdkDrag>{{item}}</div>
+        <div class="middleSectionBoard">
+            <div class="secondTitle">
+                <h2>In progress</h2>
+                <button class="testButton"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 1.5V16.5"  stroke-width="2" stroke-linecap="round"/>
+                    <path d="M16.5 9.14148L1.5 9.14148"  stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
             </div>
-        </div> -->
+            <div>
+                <div *ngFor="let todo of todos">
+                    <div *ngIf="this.todo.category == 'inProgress'" class="taskContainer" draggable="true">
+                        <div class="tagContainer">{{this.todo.tag}}</div>
+                        <div class="textTask">
+                            <h3>{{this.todo.title}}</h3>
+                            <span>{{this.todo.text}}.</span>
+                        </div>
+                        <div *ngIf="this.todo.stateNow > 0" class="statusContainer">
+                            <div class="progressBar">
+                                <div class="progressStateNow" style="width: calc(100%/{{this.todo.stateTotal}}*{{this.todo.stateNow}});"></div>
+                            </div>
+                            <span>{{this.todo.stateNow}}/{{this.todo.stateTotal}} Done</span>
+                        </div>
+                        <div class="contactSection">
+                            <div class="contacts">
+                                <div *ngFor="let contactName of this.todo.contacts.names;  index as i">
+                                    <div *ngIf="this.todo.contacts.names.length <= 3 " class="contactIcon" style="background-color: {{this.todo.contacts.colors[i]}};"> {{contactName}}</div>
+                                    <div *ngIf="i < 2 && this.todo.contacts.names.length > 3" class="contactIcon" style="background-color: {{this.todo.contacts.colors[i]}};">{{contactName}}</div>
+                                </div>
+                                <div *ngIf="this.todo.contacts.names.length >= 4" class="moreContactsIcon">+{{this.todo.contacts.names.length-2}}</div>
+                            </div>
+
+                            <img src=" ../../assets/img/{{this.todo.priority}}.png ">
+                        </div>
+                        <div class="marginContainer"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="middleSectionBoard">
+                <div class="secondTitle">
+                    <h2>Awaiting Feedback</h2>
+                    <button class="testButton"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 1.5V16.5"  stroke-width="2" stroke-linecap="round"/>
+                    <path d="M16.5 9.14148L1.5 9.14148"  stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+                </div>
+                <div>
+                    <div class="taskContainer">
+                        <div class="tagContainer" style="background-color: #1FD7C1;">Backoffice</div>
+                        <div class="textTask">
+                            <h3>Accounting invoices</h3>
+                            <span>Write open invoices for customer</span>
+                        </div>
+                        <!-- <div class="statusContainer">
+                        <div></div>
+                        <span>1/2 Done</span>
+                    </div> -->
+                        <div class="contactSection">
+                            <div class="contacts">
+                                <div>
+                                    <div class="firstContactIcon">MB</div>
+                                </div>
+                                <div>
+                                    <div class="contactIcon">MV</div>
+                                </div>
+                                <div>
+                                    <div class="contactIcon" style="background-color:#2A3647;">+3</div>
+                                </div>
+                            </div>
+
+                            <img src=" ../../assets/img/medium.png ">
+                        </div>
+                    </div>
+                    <div class="taskContainer" style="margin-top: 35px;">
+                        <div class="tagContainer" style="background-color: #1FD7C1;">Backoffice</div>
+                        <div class="textTask">
+                            <h3>Accounting invoices</h3>
+                            <span>Write open invoices for customer</span>
+                        </div>
+                        <!-- <div class="statusContainer">
+                        <div></div>
+                        <span>1/2 Done</span>
+                    </div> -->
+                        <div class="contactSection">
+                            <div class="contacts">
+                                <div>
+                                    <div class="firstContactIcon">MB</div>
+                                </div>
+                                <div>
+                                    <div class="contactIcon">MV</div>
+                                </div>
+                                <div>
+                                    <div class="contactIcon" style="background-color:#2A3647;">+3</div>
+                                </div>
+                            </div>
+
+                            <img src=" ../../assets/img/medium.png ">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lastSectionBoard">
+                <div class="secondTitle">
+                    <h2>Done</h2>
+                    <button class="testButton"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9 1.5V16.5"  stroke-width="2" stroke-linecap="round"/>
+                    <path d="M16.5 9.14148L1.5 9.14148"  stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+                </div>
+                <div>
+                    <div class="taskContainer">
+                        <div class="tagContainer">Design</div>
+                        <div class="textTask">
+                            <h3>Website redesign</h3>
+                            <span>Modify the contents of the main website...</span>
+                        </div>
+                        <div class="statusContainer">
+                            <div></div>
+                            <span>1/2 Done</span>
+                        </div>
+                        <div class="contactSection">
+                            <div class="contacts">
+                                <div>
+                                    <div class="firstContactIcon">MB</div>
+                                </div>
+                                <div>
+                                    <div class="contactIcon">MV</div>
+                                </div>
+                                <div>
+                                    <div class="contactIcon" style="background-color:#02CF2F;">EF</div>
+                                </div>
+                            </div>
+
+                            <img src=" ../../assets/img/low.png ">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
-</div>
