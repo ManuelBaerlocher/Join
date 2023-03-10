@@ -45,7 +45,7 @@ h1 {
                 font-weight: 700;
                 font-size: 21px;
                 line-height: 120%;
-                white-space: nowrap
+                white-space: nowrap;
             }
             img {
                 padding-left: 10px;
@@ -100,4 +100,158 @@ h1 {
 
 .secondContainer {
     margin-top: 112px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.secondTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 35px;
+    h2 {
+        font-weight: 700;
+        font-size: 21px;
+        margin: 0;
+    }
+    button {
+        width: 30px;
+        height: 30px;
+        border: 2px solid #2a3647;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        &:hover {
+            border: 2px solid #29abe2;
+            svg {
+                stroke: #29abe2;
+            }
+        }
+        svg {
+            stroke: #2a3647;
+        }
+    }
+}
+
+.taskContainer {
+    background-color: white;
+    box-shadow: 0px 0px 14px 3px rgba(0, 0, 0, 0.04);
+    border-radius: 30px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.tagContainer {
+    background: #ff7a00;
+    border-radius: 8px;
+    height: 27px;
+    padding: 4px 25px 4px 25px;
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 16px;
+    color: white;
+}
+
+.textTask {
+    margin-top: 20px;
+    h3 {
+        margin: 0;
+        margin-bottom: 10px;
+        font-weight: 700;
+        font-size: 16px;
+        color: #2a3647;
+    }
+    span {
+        display: flex;
+        font-weight: 400;
+        font-size: 16px;
+        color: #a8a8a8;
+        width: 207px;
+        line-height: 120%;
+    }
+}
+
+.statusContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 209px;
+    margin-top: 20px;
+    div {
+        width: 138px;
+        height: 8px;
+        background: #f4f4f4;
+        border-radius: 2px;
+    }
+    span {
+        display: flex;
+        font-weight: 400;
+        font-size: 12px;
+        color: #000000;
+        line-height: 120%;
+    }
+}
+
+.contactSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 207px;
+    margin-top: 20px;
+    img {
+        margin-right: 10px;
+    }
+}
+
+.contacts {
+    display: flex;
+}
+
+.firstContactIcon {
+    background-color: #0190e0;
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    border: 1px solid #ffffff;
+    font-weight: 400;
+    font-size: 12px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contactIcon {
+    background-color: #ee00d6;
+    margin-left: -6px;
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    border: 1px solid #ffffff;
+    font-weight: 400;
+    font-size: 12px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.middleSectionBoard {
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.firstSectionBoard {
+    margin-right: 2px;
+}
+
+.lastSectionBoard {
+    margin-left: 2px;
 }
