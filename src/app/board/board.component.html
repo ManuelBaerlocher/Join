@@ -96,57 +96,32 @@
                 </button>
             </div>
             <div>
-                <div class="taskContainer">
-                    <div class="tagContainer" style="background-color: #1FD7C1;">Backoffice</div>
-                    <div class="textTask">
-                        <h3>Accounting invoices</h3>
-                        <span>Write open invoices for customer</span>
-                    </div>
-                    <!-- <div class="statusContainer">
-                        <div></div>
-                        <span>1/2 Done</span>
-                    </div> -->
-                    <div class="contactSection">
-                        <div class="contacts">
-                            <div>
-                                <div class="firstContactIcon">MB</div>
-                            </div>
-                            <div>
-                                <div class="contactIcon">MV</div>
-                            </div>
-                            <div>
-                                <div class="contactIcon" style="background-color:#2A3647;">+3</div>
-                            </div>
+                <div *ngFor="let todo of todos">
+                    <div *ngIf="this.todo.category == 'awaitingFeedback'" class="taskContainer" draggable="true">
+                        <div class="tagContainer">{{this.todo.tag}}</div>
+                        <div class="textTask">
+                            <h3>{{this.todo.title}}</h3>
+                            <span>{{this.todo.text}}.</span>
                         </div>
-
-                        <img src=" ../../assets/img/medium.png ">
-                    </div>
-                </div>
-                <div class="taskContainer" style="margin-top: 35px;">
-                    <div class="tagContainer" style="background-color: #1FD7C1;">Backoffice</div>
-                    <div class="textTask">
-                        <h3>Accounting invoices</h3>
-                        <span>Write open invoices for customer</span>
-                    </div>
-                    <!-- <div class="statusContainer">
-                        <div></div>
-                        <span>1/2 Done</span>
-                    </div> -->
-                    <div class="contactSection">
-                        <div class="contacts">
-                            <div>
-                                <div class="firstContactIcon">MB</div>
+                        <div *ngIf="this.todo.stateNow > 0" class="statusContainer">
+                            <div class="progressBar">
+                                <div class="progressStateNow" style="width: calc(100%/{{this.todo.stateTotal}}*{{this.todo.stateNow}});"></div>
                             </div>
-                            <div>
-                                <div class="contactIcon">MV</div>
-                            </div>
-                            <div>
-                                <div class="contactIcon" style="background-color:#2A3647;">+3</div>
-                            </div>
+                            <span>{{this.todo.stateNow}}/{{this.todo.stateTotal}} Done</span>
                         </div>
+                        <div class="contactSection">
+                            <div class="contacts">
+                                <div *ngFor="let contactName of this.todo.contacts.names;  index as i">
+                                    <div *ngIf="this.todo.contacts.names.length <= 3 " class="contactIcon" style="background-color: {{this.todo.contacts.colors[i]}};"> {{contactName}}</div>
+                                    <div *ngIf="i < 2 && this.todo.contacts.names.length > 3" class="contactIcon" style="background-color: {{this.todo.contacts.colors[i]}};">{{contactName}}</div>
+                                </div>
+                                <div *ngIf="this.todo.contacts.names.length >= 4" class="moreContactsIcon">+{{this.todo.contacts.names.length-2}}</div>
+                            </div>
 
-                        <img src=" ../../assets/img/medium.png ">
+                            <img src=" ../../assets/img/{{this.todo.priority}}.png ">
+                        </div>
                     </div>
+                    <div class="marginContainer"></div>
                 </div>
             </div>
         </div>
@@ -160,34 +135,36 @@
                 </button>
             </div>
             <div>
-                <div class="taskContainer">
-                    <div class="tagContainer">Design</div>
-                    <div class="textTask">
-                        <h3>Website redesign</h3>
-                        <span>Modify the contents of the main website...</span>
-                    </div>
-                    <div class="statusContainer">
-                        <div></div>
-                        <span>1/2 Done</span>
-                    </div>
-                    <div class="contactSection">
-                        <div class="contacts">
-                            <div>
-                                <div class="firstContactIcon">MB</div>
-                            </div>
-                            <div>
-                                <div class="contactIcon">MV</div>
-                            </div>
-                            <div>
-                                <div class="contactIcon" style="background-color:#02CF2F;">EF</div>
-                            </div>
+                <div *ngFor="let todo of todos">
+                    <div *ngIf="this.todo.category == 'awaitingFeedback'" class="taskContainer" draggable="true">
+                        <div class="tagContainer">{{this.todo.tag}}</div>
+                        <div class="textTask">
+                            <h3>{{this.todo.title}}</h3>
+                            <span>{{this.todo.text}}.</span>
                         </div>
+                        <div *ngIf="this.todo.stateNow > 0" class="statusContainer">
+                            <div class="progressBar">
+                                <div class="progressStateNow" style="width: calc(100%/{{this.todo.stateTotal}}*{{this.todo.stateNow}});"></div>
+                            </div>
+                            <span>{{this.todo.stateNow}}/{{this.todo.stateTotal}} Done</span>
+                        </div>
+                        <div class="contactSection">
+                            <div class="contacts">
+                                <div *ngFor="let contactName of this.todo.contacts.names;  index as i">
+                                    <div *ngIf="this.todo.contacts.names.length <= 3 " class="contactIcon" style="background-color: {{this.todo.contacts.colors[i]}};"> {{contactName}}</div>
+                                    <div *ngIf="i < 2 && this.todo.contacts.names.length > 3" class="contactIcon" style="background-color: {{this.todo.contacts.colors[i]}};">{{contactName}}</div>
+                                </div>
+                                <div *ngIf="this.todo.contacts.names.length >= 4" class="moreContactsIcon">+{{this.todo.contacts.names.length-2}}</div>
+                            </div>
 
-                        <img src=" ../../assets/img/low.png ">
+                            <img src=" ../../assets/img/{{this.todo.priority}}.png ">
+                        </div>
                     </div>
+                    <div class="marginContainer"></div>
                 </div>
             </div>
         </div>
 
     </div>
+
 </div>
