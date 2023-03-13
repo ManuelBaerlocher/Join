@@ -266,10 +266,12 @@ h1 {
 .middleSectionBoard {
     margin-left: 2px;
     margin-right: 2px;
+    width: 245px;
 }
 
 .firstSectionBoard {
     margin-right: 2px;
+    width: 245px;
 }
 
 .lastSectionBoard {
@@ -278,4 +280,8 @@ h1 {
 
 .marginContainer {
     margin-bottom: 25px;
+}
+
+.dropContainer {
+    height: 400px;
 }

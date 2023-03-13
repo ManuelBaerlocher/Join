@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./board.component.scss']
 })
 export class BoardComponent implements OnInit {
+
+  public currentDraggedElement = 0;
+
   public todos = [{
     'id': 0,
     'title': 'Website redesign',
@@ -38,14 +41,36 @@ export class BoardComponent implements OnInit {
     'priority': 'urgent',
 
   }
+
   ];
 
+
   constructor() {
+
+
 
   }
 
   ngOnInit(): void {
     console.log(this.todos)
+
+
+
   }
 
+
+  testManuel(id: number) {
+
+    this.currentDraggedElement = id
+    console.log(this.currentDraggedElement)
+  }
+
+  allowDrop(ev: any) {
+    ev.preventDefault();
+  }
+
+  moveTo(category: any) {
+    this.todos[this.currentDraggedElement]['category'] = category
+
+  }
 }
