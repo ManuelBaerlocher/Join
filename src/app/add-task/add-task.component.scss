@@ -1,6 +1,12 @@
 .mainContainer {
-    margin: 82px 123px 74px 123px;
     font-family: "inter", sans-serif;
+    // margin: 89px 0 0 232px;
+    // height: calc(100vh - 89px);
+    // width: calc(100% - 232px);
+    // background: #f6f7f8;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
 }
 
 button {
@@ -131,6 +137,7 @@ label {
 .buttons {
     display: flex;
     justify-content: flex-end;
+
     button {
         display: flex;
         align-items: center;
@@ -153,7 +160,7 @@ label {
         }
         &:hover {
             color: #29abe2;
-            border: 2px solid #29ABE2;
+            border: 2px solid #29abe2;
             filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
         }
     }
@@ -166,7 +173,7 @@ label {
             margin-left: 10px;
         }
         &:hover {
-            background: #29ABE2;
+            background: #29abe2;
             filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
         }
     }

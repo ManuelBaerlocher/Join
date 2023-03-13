@@ -1,6 +1,9 @@
 .mainContainer {
     font-family: "inter", sans-serif !important;
     display: flex;
+    position: absolute;
+    left: 232px;
+    top: 89px;
 }
 
 .contactList {
@@ -11,6 +14,7 @@
     h3 {
         margin: 10px 0 24px 85px;
         font-size: 21px;
+        font-weight: 400;
     }
 }
 
@@ -170,7 +174,7 @@
 }
 
 button {
-    position: absolute;
+    position: fixed;
     bottom: 64px;
     right: 52px;
     display: flex;
