@@ -2,27 +2,13 @@
     <div class="contactList">
         <h3>A</h3>
         <div class="divider"></div>
-        <div class="contact selectContact">
-            <div class="contactIcon">MB</div>
-            <div>
-                <div class="contactName">Manuel Bärlocher</div>
-                <div class="contactMail"> manuell@bluewin.ch </div>
-            </div>
-        </div>
-        <div class="contact">
-            <div class="contactIcon">MB</div>
-            <div>
-                <div class="contactName">Manuel Bärlocher</div>
-                <div class="contactMail"> manuell@bluewin.ch </div>
-            </div>
-        </div>
-        <h3>B</h3>
-        <div class="divider"></div>
-        <div class="contact">
-            <div class="contactIcon">MB</div>
-            <div>
-                <div class="contactName">Manuel Bärlocher</div>
-                <div class="contactMail"> manuell@bluewin.ch </div>
+        <div *ngFor="let contact of contacts">
+            <div (click)="selectContact(this.contact.id)" [ngClass]="{'selectContact': this.contact.select}" class="contact">
+                <div class="contactIcon" style="background-color: {{this.contact.color}};">{{this.contact.shortName}}</div>
+                <div>
+                    <div class="contactName">{{this.contact.firstName}} {{this.contact.lastName}}</div>
+                    <div class="contactMail">{{this.contact.mail}}</div>
+                </div>
             </div>
         </div>
 
@@ -33,29 +19,31 @@
             <img src="../../assets/img/blueLine.png">
             <span>Better with a team</span>
         </div>
-        <div>
-            <div class="contactTitle">
-                <div class="contactIconRight">MB</div>
-                <div class="rightContactTitle">
-                    <h2>Manuel Bärlocher</h2>
-                    <div class="addTask">
-                        <mat-icon>add</mat-icon>
-                        <span>Add Task</span>
+        <div *ngFor="let contact of contacts">
+            <div *ngIf="this.contact.select">
+                <div class="contactTitle">
+                    <div class="contactIconRight" style="background-color: {{this.contact.color}};">{{this.contact.shortName}}</div>
+                    <div class="rightContactTitle">
+                        <h2>{{this.contact.firstName}} {{this.contact.lastName}}</h2>
+                        <div class="addTask">
+                            <mat-icon>add</mat-icon>
+                            <span>Add Task</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="contactInformationContainer">
-                <h3>Contact Information</h3>
-                <div>
-                    <img src="../../assets/img/pencil2.png">
-                    <span>Edit Contact</span>
+                <div class="contactInformationContainer">
+                    <h3>Contact Information</h3>
+                    <div>
+                        <img src="../../assets/img/pencil2.png">
+                        <span>Edit Contact</span>
+                    </div>
                 </div>
-            </div>
-            <div class="contactAdress">
-                <h4>Email</h4>
-                <span class="mail">manuell@bluewin.ch</span>
-                <h4>Phone</h4>
-                <span>+41 79 836 03 16</span>
+                <div class="contactAdress">
+                    <h4>Email</h4>
+                    <span class="mail">{{this.contact.mail}}</span>
+                    <h4>Phone</h4>
+                    <span>{{this.contact.phone}}</span>
+                </div>
             </div>
         </div>
         <button>New contact<img src="../../assets/img/addContact.png"></button>
