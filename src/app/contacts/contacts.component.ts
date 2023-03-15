@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class ContactsComponent {
   public select = false
 
+  public letters: string[] = []
+
   public contacts = [{
     'id': 0,
     'color': '#fd2829',
@@ -30,7 +32,7 @@ export class ContactsComponent {
   },
   {
     'id': 2,
-    'color': '#f34d4e',
+    'color': '#2d97eb',
     'shortName': 'EA',
     'firstName': 'Erich',
     'lastName': 'Anred',
@@ -45,25 +47,28 @@ export class ContactsComponent {
   }
 
   ngOnInit(): void {
-    console.log(this.contacts[0].shortName)
-    let text = this.contacts[0].shortName;
 
-    let test = this.contacts[0].shortName.charAt(1)
-    console.log(test)
-    // this.contacts = this.contacts.sort((a, b) => { } )
+    this.sortWithLastName()
 
-  // sortiertfunktion(a: any, b: any) {
-  //   if (a.id < b.id) {
-  //     return -1;
-  //   }
-}
+  }
+
+  sortWithLastName() {
+    this.contacts = this.contacts.sort((a, b) => a.lastName > b.lastName ? 1 : -1)
+
+    for (let i = 0; i < this.contacts.length; i++) {
+      let initalLetter = this.contacts[i].lastName.charAt(0)
+
+      this.letters.push(initalLetter);
+    }
+  }
 
   selectContact(id: number) {
     for (let i = 0; i < this.contacts.length; i++) {
       this.contacts[i].select = false
+      if (this.contacts[i].id == id) {
+        this.contacts[i].select = true
+      }
     }
-
-    this.contacts[id].select = true
   }
 
 }

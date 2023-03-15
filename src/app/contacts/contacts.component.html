@@ -1,13 +1,15 @@
 <div class="mainContainer">
     <div class="contactList">
-        <h3>A</h3>
-        <div class="divider"></div>
-        <div *ngFor="let contact of contacts">
-            <div (click)="selectContact(this.contact.id)" [ngClass]="{'selectContact': this.contact.select}" class="contact">
-                <div class="contactIcon" style="background-color: {{this.contact.color}};">{{this.contact.shortName}}</div>
-                <div>
-                    <div class="contactName">{{this.contact.firstName}} {{this.contact.lastName}}</div>
-                    <div class="contactMail">{{this.contact.mail}}</div>
+        <div *ngFor="let letter of letters;  index as i">
+            <h3>{{letter}}</h3>
+            <div class="divider"></div>
+            <div *ngFor="let contact of contacts">
+                <div *ngIf="this.letter == this.contact.lastName.charAt(0)" (click)="selectContact(this.contact.id)" [ngClass]="{'selectContact': this.contact.select}" class="contact">
+                    <div class="contactIcon" style="background-color: {{this.contact.color}};">{{this.contact.shortName}}</div>
+                    <div>
+                        <div class="contactName">{{this.contact.firstName}} {{this.contact.lastName}}</div>
+                        <div class="contactMail">{{this.contact.mail}}</div>
+                    </div>
                 </div>
             </div>
         </div>
