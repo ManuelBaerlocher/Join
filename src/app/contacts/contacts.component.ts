@@ -39,6 +39,16 @@ export class ContactsComponent {
     'mail': 'a.e@bluewin.ch',
     'phone': '+41 72 836 12 12',
     'select': false
+  },
+  {
+    'id': 3,
+    'color': '#2d97eb',
+    'shortName': 'SB',
+    'firstName': 'Stephanie',
+    'lastName': 'Baerlocher',
+    'mail': 'a.e@bluewin.ch',
+    'phone': '+41 72 836 12 12',
+    'select': false
   }]
 
 
@@ -57,8 +67,13 @@ export class ContactsComponent {
 
     for (let i = 0; i < this.contacts.length; i++) {
       let initalLetter = this.contacts[i].lastName.charAt(0)
-
-      this.letters.push(initalLetter);
+      if (i >= 1) {
+        if (initalLetter[i] == initalLetter[i - 1]) {
+          this.letters.push(initalLetter);
+        }
+      } else {
+        this.letters.push(initalLetter);
+      }
     }
   }
 
