@@ -1,11 +1,15 @@
 import { Component, OnInit } from '@angular/core';
+import { DialogAddContactComponent } from '../dialog-add-contact/dialog-add-contact.component';
+
+import { Dialog } from '@angular/cdk/dialog';
+
 
 @Component({
   selector: 'app-contacts',
   templateUrl: './contacts.component.html',
   styleUrls: ['./contacts.component.scss']
 })
-export class ContactsComponent {
+export class ContactsComponent implements OnInit {
   public select = false
 
   public letters: string[] = []
@@ -52,7 +56,7 @@ export class ContactsComponent {
   }]
 
 
-  constructor() {
+  constructor(private dialog: Dialog) {
 
   }
 
@@ -86,6 +90,32 @@ export class ContactsComponent {
     }
   }
 
+  // openDialog() {
+  //   this.dialog.open(DialogAddContactComponent);
+  // }
+
+  // openDialog() {
+  //   this.dialog.open(DialogAddContactComponent, {
+  //     minWidth: '300px',
+  //   });
+  // }
+
+  openDialog(): void {
+    const dialogRef = this.dialog.open(DialogAddContactComponent, {
+      width: '500px'
+    });
+
+    dialogRef.closed.subscribe(result => {
+      if (result) {
+        console.log(result)
+      }
+    });
+
+
+  }
 }
+
+
+
 
 

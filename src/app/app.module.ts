@@ -15,8 +15,12 @@ import { HelpSideComponent } from './help-side/help-side.component';
 import { LegalnoticeComponent } from './legalnotice/legalnotice.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //Angular Material 
-import {MatIconModule} from '@angular/material/icon';
-// import {DragDropModule} from '@angular/cdk/drag-drop';
+import { MatIconModule } from '@angular/material/icon';
+import { MatDialogModule } from '@angular/material/dialog';
+import { DialogAddContactComponent } from './dialog-add-contact/dialog-add-contact.component';
+import { DialogModule } from '@angular/cdk/dialog';
+
+
 
 @NgModule({
   declarations: [
@@ -30,7 +34,8 @@ import {MatIconModule} from '@angular/material/icon';
     HeaderComponent,
     MenuComponent,
     HelpSideComponent,
-    LegalnoticeComponent
+    LegalnoticeComponent,
+    DialogAddContactComponent
   ],
   imports: [
     BrowserModule,
@@ -38,9 +43,10 @@ import {MatIconModule} from '@angular/material/icon';
     BrowserAnimationsModule,
     //Angular Material
     MatIconModule,
+    MatDialogModule,
+    DialogModule
 
 
-    // DragDropModule
   ],
   providers: [],
   bootstrap: [AppComponent]

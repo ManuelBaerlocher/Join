@@ -28,7 +28,10 @@
                     <div class="rightContactTitle">
                         <h2>{{this.contact.firstName}} {{this.contact.lastName}}</h2>
                         <div class="addTask">
-                            <mat-icon>add</mat-icon>
+                            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8.5 1V16" stroke="#29ABE2" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M16 8.64151L1 8.64151" stroke="#29ABE2" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
                             <span>Add Task</span>
                         </div>
                     </div>
@@ -48,6 +51,7 @@
                 </div>
             </div>
         </div>
-        <button>New contact<img src="../../assets/img/addContact.png"></button>
+        <button (click)="openDialog()">New contact<img src="../../assets/img/addContact.png"></button>
+
     </div>
 </div>

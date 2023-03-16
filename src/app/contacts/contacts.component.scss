@@ -35,12 +35,20 @@
     margin: 10px 0 10px 48px;
     width: 357px;
     height: 79px;
+    border-radius: 10px;
+    cursor: pointer;
+    &:hover {
+        background: linear-gradient(180deg, #f9f9f9 0%, #f0f0f0 100%);
+    }
 }
 
 .selectContact {
     background: #2a3647;
-    border-radius: 10px;
     color: white;
+    &:hover {
+        background: #2a3647;
+        color: white;
+    }
 }
 
 .contactIcon {
@@ -123,6 +131,7 @@
         align-items: center;
         font-size: 16px;
         height: 24px;
+        cursor: pointer;
         span {
             margin-left: 13px;
         }
