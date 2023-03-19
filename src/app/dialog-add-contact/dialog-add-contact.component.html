@@ -1,3 +1,19 @@
-<div>
-    <h1>Hello World</h1>
+<div class="leftContainer">
+    <img>
+    <h1>Add contact</h1>
+    <span>Task are better with a team!</span>
+    <div></div>
+</div>
+
+<div class="rightContainer">
+    <div>
+        <img>
+    </div>
+    <!-- <form class="formContainer"> -->
+    <input placeholder="Name" type="text" [(ngModel)]="data.Name">
+    <!-- <input placeholder="Email" type="email" [(ngModel)]="contact.mail">
+        <input placeholder="Phone" type="tel" [(ngModel)]="contact.phone"> -->
+    <button>Cancel</button>
+    <button type="submit" (click)="dialogRef.close(data.Name)">Create contacts</button>
+    <!-- </form> -->
 </div>

@@ -15,10 +15,12 @@ import { HelpSideComponent } from './help-side/help-side.component';
 import { LegalnoticeComponent } from './legalnotice/legalnotice.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //Angular Material 
-import { MatIconModule } from '@angular/material/icon';
-import { MatDialogModule } from '@angular/material/dialog';
+
 import { DialogAddContactComponent } from './dialog-add-contact/dialog-add-contact.component';
 import { DialogModule } from '@angular/cdk/dialog';
+import { FormsModule } from '@angular/forms';
+
+
 
 
 
@@ -42,9 +44,8 @@ import { DialogModule } from '@angular/cdk/dialog';
     AppRoutingModule,
     BrowserAnimationsModule,
     //Angular Material
-    MatIconModule,
-    MatDialogModule,
-    DialogModule
+    DialogModule,
+    FormsModule
 
 
   ],

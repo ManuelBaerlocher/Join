@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { DialogAddContactComponent } from '../dialog-add-contact/dialog-add-contact.component';
-
 import { Dialog } from '@angular/cdk/dialog';
 
 
@@ -11,6 +10,12 @@ import { Dialog } from '@angular/cdk/dialog';
 })
 export class ContactsComponent implements OnInit {
   public select = false
+
+  public newName = [{
+
+  }]
+
+
 
   public letters: string[] = []
 
@@ -90,32 +95,28 @@ export class ContactsComponent implements OnInit {
     }
   }
 
-  // openDialog() {
-  //   this.dialog.open(DialogAddContactComponent);
-  // }
 
-  // openDialog() {
-  //   this.dialog.open(DialogAddContactComponent, {
-  //     minWidth: '300px',
-  //   });
-  // }
 
   openDialog(): void {
+    console.log(this.newName)
     const dialogRef = this.dialog.open(DialogAddContactComponent, {
-      width: '500px'
+      data: { name: this.newName }
+
+
     });
 
     dialogRef.closed.subscribe(result => {
+      console.log('The dialog was closed');
       if (result) {
         console.log(result)
+        this.newName.push(result)
       }
+      // if (result) {
+      //   this.contacts.push(result: {});
+      // }
     });
 
 
   }
+
 }
-
-
-
-
-

@@ -1,6 +1,28 @@
 :host {
-    display: block;
-    background: #fff;
-    border-radius: 100px;
-    padding: 8px 16px;
+    display: flex;
+    width: 1212px;
+}
+
+.leftContainer {
+    background: #2a3647;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    width: 463px;
+    height: 594px;
+}
+
+.rightContainer {
+    height: 594px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background: #ffffff;
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
 }
