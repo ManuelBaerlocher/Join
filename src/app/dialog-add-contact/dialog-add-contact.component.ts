@@ -1,6 +1,8 @@
 
 import { Component, Inject, OnInit } from '@angular/core';
 import { DialogRef, DIALOG_DATA } from '@angular/cdk/dialog';
+import { Contact } from 'src/models/contact.class';
+
 
 
 @Component({
@@ -9,24 +11,36 @@ import { DialogRef, DIALOG_DATA } from '@angular/cdk/dialog';
   styleUrls: ['./dialog-add-contact.component.scss']
 })
 export class DialogAddContactComponent {
-  public contact = {
-    'name': '',
-    'mail': '',
-    'phone': '',
+
+
+
+  contact: Contact = new Contact();
+  allContacts: any;
+  contacts: any;
+
+  constructor() {
+
   }
 
-  constructor(
-    public dialogRef: DialogRef<string>,
-    @Inject(DIALOG_DATA) public data: any) { }
+  // onNoClick(): void {
+  //   this.dialogRef.close();
+  //   console.log('test')
+  // }
 
-  onNoClick(): void {
-    this.dialogRef.close();
-    console.log('test')
-  }
+  // onSaveClick(): void {
+  //   // const contact = { name: 'Max', email: 'Mail' };
+  //   // this.dialogRef.close(contact);
+  // }
 
-  onSaveClick(): void {
-    // const contact = { name: 'Max', email: 'Mail' };
+  saveContact(): void {
+    console.log('user', this.contact)
     // this.dialogRef.close(contact);
+    this.allContacts
+    console.log(this.allContacts)
+      // .add(this.contact.toJSON())
+      // .then((result: any) => {
+      //   console.log('testManuel', result)
+      // })
   }
 
 

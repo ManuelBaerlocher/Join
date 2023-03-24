@@ -19,6 +19,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DialogAddContactComponent } from './dialog-add-contact/dialog-add-contact.component';
 import { DialogModule } from '@angular/cdk/dialog';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 
@@ -45,7 +47,10 @@ import { FormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     //Angular Material
     DialogModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
+
+
 
 
   ],

@@ -1,19 +1,36 @@
 <div class="leftContainer">
-    <img>
+    <img src="../../assets/img/logowhite.png">
     <h1>Add contact</h1>
     <span>Task are better with a team!</span>
     <div></div>
 </div>
 
 <div class="rightContainer">
-    <div>
-        <img>
+
+    <img class="crossImg" src="../../assets/img/cross.png">
+
+    <div class="contactImg">
+        <img src="../../assets/img/contact.png">
     </div>
-    <!-- <form class="formContainer"> -->
-    <input placeholder="Name" type="text" [(ngModel)]="data.Name">
-    <!-- <input placeholder="Email" type="email" [(ngModel)]="contact.mail">
-        <input placeholder="Phone" type="tel" [(ngModel)]="contact.phone"> -->
-    <button>Cancel</button>
-    <button type="submit" (click)="dialogRef.close(data.Name)">Create contacts</button>
-    <!-- </form> -->
+    <form class="formContainer" (submit)="saveContact()">
+        <input class="inputName" placeholder="Name" type="text" [(ngModel)]="contact.firstName" name="firstName" autocomplete="false">
+        <input class="inputMail" placeholder="Email" type="email" [(ngModel)]="contact.mail">
+        <input class="inputPhone" placeholder="Phone" type="tel" [(ngModel)]="contact.phone">
+        <div>
+            <button class="cancelButton">
+                <span>Cancel</span>
+
+                <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M6.501 6.49996L11.744 11.743M1.258 11.743L6.501 6.49996L1.258 11.743ZM11.744 1.25696L6.5 6.49996L11.744 1.25696ZM6.5 6.49996L1.258 1.25696L6.5 6.49996Z"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+
+            </button>
+            <button class="createContactButton" type="submit" (click)="saveContact()">
+                <span>Create Contact</span>
+                <img src="../../assets/img/chopWhite.png">
+            </button>
+        </div>
+    </form>
 </div>

@@ -6,7 +6,10 @@
                 <input placeholder="Find Task">
                 <img src="../../assets/img/search.png">
             </div>
-            <button><span>Add Task</span><img src="../../assets/img/addTaskWhite.png"></button>
+            <button>
+                <span>Add Task</span>
+                <img src="../../assets/img/addTaskWhite.png">
+            </button>
         </div>
     </div>
 
@@ -15,15 +18,17 @@
         <div class="firstSectionBoard">
             <div class="secondTitle">
                 <h2>To do</h2>
-                <button class="testButton"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9 1.5V16.5"  stroke-width="2" stroke-linecap="round"/>
-                    <path d="M16.5 9.14148L1.5 9.14148"  stroke-width="2" stroke-linecap="round"/>
+                <button class="testButton">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 1.5V16.5" stroke-width="2" stroke-linecap="round" />
+                        <path d="M16.5 9.14148L1.5 9.14148" stroke-width="2" stroke-linecap="round" />
                     </svg>
                 </button>
             </div>
             <div class="dropContainer" (drop)="moveTo('toDo')" (dragover)="allowDrop($event)">
                 <div id="toDo" *ngFor="let todo of todos">
-                    <div *ngIf="this.todo.category == 'toDo'" class="taskContainer" draggable="true" (dragstart)="testManuel(this.todo.id)">
+                    <div *ngIf="this.todo.category == 'toDo'" class="taskContainer" draggable="true"
+                        (dragstart)="testManuel(this.todo.id)">
                         <div class="tagContainer">{{this.todo.tag}}</div>
                         <div class="textTask">
                             <h3>{{this.todo.title}}</h3>
@@ -31,17 +36,23 @@
                         </div>
                         <div *ngIf="this.todo.stateNow > 0" class="statusContainer">
                             <div class="progressBar">
-                                <div class="progressStateNow" style="width: calc(100%/{{this.todo.stateTotal}}*{{this.todo.stateNow}});"></div>
+                                <div class="progressStateNow"
+                                    style="width: calc(100%/{{this.todo.stateTotal}}*{{this.todo.stateNow}});"></div>
                             </div>
                             <span>{{this.todo.stateNow}}/{{this.todo.stateTotal}} Done</span>
                         </div>
                         <div class="contactSection">
                             <div class="contacts">
                                 <div *ngFor="let contactName of this.todo.contacts.names;  index as i">
-                                    <div *ngIf="this.todo.contacts.names.length <= 3 " class="contactIcon" style="background-color: {{this.todo.contacts.colors[i]}};"> {{contactName}}</div>
-                                    <div *ngIf="i < 2 && this.todo.contacts.names.length > 3" class="contactIcon" style="background-color: {{this.todo.contacts.colors[i]}};">{{contactName}}</div>
+                                    <div *ngIf="this.todo.contacts.names.length <= 3 " class="contactIcon"
+                                        style="background-color: {{this.todo.contacts.colors[i]}};"> {{contactName}}
+                                    </div>
+                                    <div *ngIf="i < 2 && this.todo.contacts.names.length > 3" class="contactIcon"
+                                        style="background-color: {{this.todo.contacts.colors[i]}};">{{contactName}}
+                                    </div>
                                 </div>
-                                <div *ngIf="this.todo.contacts.names.length >= 4" class="moreContactsIcon">+{{this.todo.contacts.names.length-2}}</div>
+                                <div *ngIf="this.todo.contacts.names.length >= 4" class="moreContactsIcon">
+                                    +{{this.todo.contacts.names.length-2}}</div>
                             </div>
 
                             <img src=" ../../assets/img/{{this.todo.priority}}.png ">
@@ -56,15 +67,17 @@
         <div class="middleSectionBoard">
             <div class="secondTitle">
                 <h2>In progress</h2>
-                <button class="testButton"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9 1.5V16.5"  stroke-width="2" stroke-linecap="round"/>
-                    <path d="M16.5 9.14148L1.5 9.14148"  stroke-width="2" stroke-linecap="round"/>
+                <button class="testButton"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 1.5V16.5" stroke-width="2" stroke-linecap="round" />
+                        <path d="M16.5 9.14148L1.5 9.14148" stroke-width="2" stroke-linecap="round" />
                     </svg>
                 </button>
             </div>
             <div class="dropContainer" (drop)="moveTo('inProgress')" (dragover)="allowDrop($event)">
                 <div id="inProgress" *ngFor="let todo of todos">
-                    <div *ngIf="this.todo.category == 'inProgress'" class="taskContainer" draggable="true" (dragstart)="testManuel(this.todo.id)">
+                    <div *ngIf="this.todo.category == 'inProgress'" class="taskContainer" draggable="true"
+                        (dragstart)="testManuel(this.todo.id)">
                         <div class="tagContainer">{{this.todo.tag}}</div>
                         <div class="textTask">
                             <h3>{{this.todo.title}}</h3>
@@ -72,17 +85,23 @@
                         </div>
                         <div *ngIf="this.todo.stateNow > 0" class="statusContainer">
                             <div class="progressBar">
-                                <div class="progressStateNow" style="width: calc(100%/{{this.todo.stateTotal}}*{{this.todo.stateNow}});"></div>
+                                <div class="progressStateNow"
+                                    style="width: calc(100%/{{this.todo.stateTotal}}*{{this.todo.stateNow}});"></div>
                             </div>
                             <span>{{this.todo.stateNow}}/{{this.todo.stateTotal}} Done</span>
                         </div>
                         <div class="contactSection">
                             <div class="contacts">
                                 <div *ngFor="let contactName of this.todo.contacts.names;  index as i">
-                                    <div *ngIf="this.todo.contacts.names.length <= 3 " class="contactIcon" style="background-color: {{this.todo.contacts.colors[i]}};"> {{contactName}}</div>
-                                    <div *ngIf="i < 2 && this.todo.contacts.names.length > 3" class="contactIcon" style="background-color: {{this.todo.contacts.colors[i]}};">{{contactName}}</div>
+                                    <div *ngIf="this.todo.contacts.names.length <= 3 " class="contactIcon"
+                                        style="background-color: {{this.todo.contacts.colors[i]}};"> {{contactName}}
+                                    </div>
+                                    <div *ngIf="i < 2 && this.todo.contacts.names.length > 3" class="contactIcon"
+                                        style="background-color: {{this.todo.contacts.colors[i]}};">{{contactName}}
+                                    </div>
                                 </div>
-                                <div *ngIf="this.todo.contacts.names.length >= 4" class="moreContactsIcon">+{{this.todo.contacts.names.length-2}}</div>
+                                <div *ngIf="this.todo.contacts.names.length >= 4" class="moreContactsIcon">
+                                    +{{this.todo.contacts.names.length-2}}</div>
                             </div>
 
                             <img src=" ../../assets/img/{{this.todo.priority}}.png ">
@@ -97,9 +116,10 @@
         <div class="middleSectionBoard">
             <div class="secondTitle">
                 <h2>Awaiting Feedback</h2>
-                <button class="testButton"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9 1.5V16.5"  stroke-width="2" stroke-linecap="round"/>
-                    <path d="M16.5 9.14148L1.5 9.14148"  stroke-width="2" stroke-linecap="round"/>
+                <button class="testButton"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 1.5V16.5" stroke-width="2" stroke-linecap="round" />
+                        <path d="M16.5 9.14148L1.5 9.14148" stroke-width="2" stroke-linecap="round" />
                     </svg>
                 </button>
             </div>
@@ -161,9 +181,10 @@
         <div class="lastSectionBoard">
             <div class="secondTitle">
                 <h2>Done</h2>
-                <button class="testButton"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9 1.5V16.5"  stroke-width="2" stroke-linecap="round"/>
-                    <path d="M16.5 9.14148L1.5 9.14148"  stroke-width="2" stroke-linecap="round"/>
+                <button class="testButton"><svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 1.5V16.5" stroke-width="2" stroke-linecap="round" />
+                        <path d="M16.5 9.14148L1.5 9.14148" stroke-width="2" stroke-linecap="round" />
                     </svg>
                 </button>
             </div>

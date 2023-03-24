@@ -1,0 +1,42 @@
+[
+    {
+        "id": 0,
+        "color": "#fd2829",
+        "shortName": "MB",
+        "firstName": "Manuel",
+        "lastName": "Bärlocher",
+        "mail": "manuell@bluewin.ch",
+        "phone": "+41 79 836 03 16",
+        "select": false
+    },
+    {
+        "id": 1,
+        "color": "#b88770",
+        "shortName": "OM",
+        "firstName": "Otto",
+        "lastName": "Meier",
+        "mail": "o.meier@bluewin.ch",
+        "phone": "+41 79 836 12 12",
+        "select": false
+    },
+    {
+        "id": 2,
+        "color": "#2d97eb",
+        "shortName": "EA",
+        "firstName": "Erich",
+        "lastName": "Anred",
+        "mail": "a.e@bluewin.ch",
+        "phone": "+41 72 836 12 12",
+        "select": false
+    },
+    {
+        "id": 3,
+        "color": "#2d97eb",
+        "shortName": "SB",
+        "firstName": "Stephanie",
+        "lastName": "Baerlocher",
+        "mail": "a.e@bluewin.ch",
+        "phone": "+41 72 836 12 12",
+        "select": false
+    }
+]
