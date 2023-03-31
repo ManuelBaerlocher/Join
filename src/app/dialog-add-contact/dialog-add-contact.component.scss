@@ -2,7 +2,20 @@
     display: flex;
     width: 1212px;
     font-family: "Inter", sans-serif;
+    // animation: custom-dialog-enter 1s ease;
 }
+
+// @keyframes custom-dialog-enter {
+//     from {
+//         right: 100%;
+//         overla
+//     }
+
+//     to {
+//         opacity: 1;
+//         -webkit-transform: translateX(0px);
+//     }
+// }
 
 .leftContainer {
     background: #2a3647;

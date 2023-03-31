@@ -18,30 +18,33 @@ export class DialogAddContactComponent {
   allContacts: any;
   contacts: any;
 
-  constructor() {
+
+
+  constructor(public dialogRef: DialogRef<any>, @Inject(DIALOG_DATA) public data: Contact) {
 
   }
 
-  // onNoClick(): void {
-  //   this.dialogRef.close();
-  //   console.log('test')
-  // }
-
-  // onSaveClick(): void {
-  //   // const contact = { name: 'Max', email: 'Mail' };
-  //   // this.dialogRef.close(contact);
-  // }
+  onNoClick() {
+    this.dialogRef.close();
+    console.log('test')
+  }
 
   saveContact(): void {
-    console.log('user', this.contact)
-    // this.dialogRef.close(contact);
-    this.allContacts
-    console.log(this.allContacts)
-      // .add(this.contact.toJSON())
-      // .then((result: any) => {
-      //   console.log('testManuel', result)
-      // })
+    // const contact = { name: 'Max', email: 'Mail' };
+    console.log(this.contact.firstName)
+    this.dialogRef.close(this.contact);
   }
+
+  // saveContact(): void {
+  //   // console.log('user', this.contact)
+  //   // this.dialogRef.close(contact);
+  //   // this.allContacts
+  //   // console.log(this.allContacts)
+  //     // .add(this.contact.toJSON())
+  //     // .then((result: any) => {
+  //     //   console.log('testManuel', result)
+  //     // })
+  // }
 
 
 }

@@ -6,7 +6,7 @@ export class Contact {
     firstName: string;
     lastName: string;
     mail: string;
-    phone: number;
+    phone: string;
     select: boolean;
 
     constructor(obj?: any) {
